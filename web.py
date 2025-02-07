@@ -6,9 +6,9 @@ from streamlit_option_menu import option_menu
 st.set_page_config(page_title='Prediction of Disease Outbreaks',
 				   layout='wide',
 				   page_icon="👩🏻‍⚕️")
-diabetes_model=pickle.load(open(r"C:\Users\hassa\Downloads\AI-internship(aicte-edunet)\saved_models\diabetes_model.sav",'rb'))
-hearts_disease_model=pickle.load(open(r"C:\Users\hassa\Downloads\AI-internship(aicte-edunet)\saved_models\heartss_model.sav",'rb'))
-parkinsons_disease_model=pickle.load(open(r"C:\Users\hassa\Downloads\AI-internship(aicte-edunet)\saved_models\parkinsons_model.sav",'rb'))
+diabetes_model=pickle.load(open("saved_models\diabetes_model.sav",'rb'))
+hearts_disease_model=pickle.load(open("saved_models\heartss_model.sav",'rb'))
+parkinsons_disease_model=pickle.load(open("saved_models\parkinsons_model.sav",'rb'))
 
 with st.sidebar:
 	selected=option_menu('Prediction of disease outbreak system',['Diabetes Prediction','Heart Disease Prediction','parkinsons Prediction'],menu_icon='hospital-fill',icons=['activity','heart','person'],default_index=0)
